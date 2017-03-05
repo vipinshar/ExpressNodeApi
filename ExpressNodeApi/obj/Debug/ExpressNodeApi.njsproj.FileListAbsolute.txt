@@ -1,0 +1,2 @@
+E:\PracticeProject\ExpressNodeApi\ExpressNodeApi\ExpressNodeApi\obj\Debug\ExpressNodeApi.njsprojResolveAssemblyReference.cache
+E:\PracticeProject\ExpressNodeApi\ExpressNodeApi\ExpressNodeApi\bin\Microsoft.NodejsTools.WebRole.dll

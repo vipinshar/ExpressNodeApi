@@ -1,0 +1,21 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<div ng-app="app" ng-controller="UsersController" ng-init="GetAll()">
+    <table ng-table="tableParams" [class="ng-table-responsive" ] class="table table-bordered" show-filter="true">
+        <tr>
+            <th>Sr.</th>
+            <th>Name</th>
+            <th>City</th>
+            <th>Mobile</th>
+            <th>Code</th>
+        </tr>
+        <tr ng-repeat="item in $data track by $index">
+            <td class="">{{$index+1}}</td>
+            <td class="">{{item.Name}}</td>
+            <td class="">{{item.City}}</td>
+            <td class="">{{item.Mobile}}</td>
+            <td class="">{{item.Code}}</td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,112 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/ng-table@2.0.2/bundles/ng-table.min.css">
+    @*<script src="https://unpkg.com/ng-table@2.0.2/bundles/ng-table.min.js"></script>*@
+
+    <script src="https://unpkg.com/ng-table@3.0.1/bundles/ng-table.js"> </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Signup / Registration form using Material Design - Demo by W3lessons</title>
+    <!-- CORE CSS-->
+    <script src="~/js/AngularApp/app.js"></script>
+
+    <script src="~/js/AngularApp/Service.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
+    <style type="text/css">
+        html,
+        body {
+            height: 100%;
+        }
+
+        html {
+            display: table;
+            margin: auto;
+        }
+
+        body {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .margin {
+            margin: 0 !important;
+        }
+    </style>
+    
+</head>
+<body class="blue" ng-app="ngapp" ng-controller="saveCtrl">
+    <div id="login-page" class="row">
+        <div class="col s12 z-depth-6 card-panel">
+            <form class="login-form">
+                <div class="row">
+                    <div class="input-field col s12 center">
+                        <img src="http://cybersipahi.org/wp-content/uploads/2016/12/cybersipah_websitei.png" alt="" class="responsive-img valign profile-image-login">
+                    </div>
+                </div>
+                <div ng-show="isSuccess">
+                    <div class="row margin">
+                        <div class="input-field col s12">
+                            <i class="mdi-social-person-outline prefix"></i>
+                            <input id="name" type="text" ng-model="SaveModel.name">
+                          
+                        </div>
+                    </div>
+
+                    <div class="row margin">
+                        <div class="input-field col s12">
+                            <i class="mdi-action-lock-outline prefix"></i>
+                            <input id="city" type="text" class="validate" ng-model="SaveModel.city">
+                           
+                        </div>
+                    </div>
+                    <div class="row margin">
+                        <div class="input-field col s12">
+                            <i class="mdi-action-lock-outline prefix"></i>
+                            <input id="mobile" type="text" ng-model="SaveModel.mobile">
+                           
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row margin">
+                    <div class="input-field col s12">
+                        <i class="mdi-action-lock-outline prefix"></i>
+                        <input id="otp" type="text" ng-model="SaveModel.OTP">
+                        <label for="otp">OTP</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <a href="#" class="btn waves-effect waves-light col s12" ng-click="Verify(SaveModel.OTP)">Verify</a>
+                    </div>
+
+                    <div class="input-field col s12">
+                        <a href="#" class="btn waves-effect waves-light col s12" ng-click="ResetNew()">Reset</a>
+                    </div>
+                   
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <center>
+      
+    </center>
+    <!-- ================================================
+      Scripts
+      ================================================ -->
+    <!-- jQuery Library -->
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!--materialize js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
+</body>
+</html>
