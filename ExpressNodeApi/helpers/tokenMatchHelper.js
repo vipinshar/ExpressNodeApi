@@ -1,11 +1,12 @@
 ﻿
 var Promise = require('promise');
 var User = require('../models/tblPeopleComeModel');
-
+var ObjectID = require( 'mongodb' ).ObjectID;
 var user = {
     Insert: function (records) {
         return new Promise(function (resolve, reject) {
-            var saveUser = User({
+            var saveUser = User( {
+                _id: new ObjectID(),
                 Name: records.Name,
                 City: records.City,
                 Mobile: records.Mobile,

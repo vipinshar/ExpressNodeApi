@@ -10,7 +10,7 @@ var userSchema = new Schema({
     City: String,
     Mobile: String,
     Code: String,
-    _id: String
+    _id: { type: Schema.Types.ObjectId }
 });
 
 // the schema is useless so far
